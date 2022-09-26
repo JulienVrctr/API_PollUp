@@ -67,6 +67,9 @@ public class Artist implements UserDetails {
     @OneToMany(mappedBy = "idartist", cascade = CascadeType.ALL)
     private List<Project> projects = new ArrayList<>();
 
+    @OneToMany(mappedBy = "idartist", cascade = CascadeType.ALL)
+    private List<FeaturingArtist> featurings = new ArrayList<>();
+
     @ManyToMany
     @JoinTable(
             name = "reward_artist",

@@ -1,5 +1,6 @@
 package com.pollup.api.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -20,8 +21,10 @@ public class FeaturingArtist {
     @Column(name = "idfeaturing")
     private Long idfeaturing;
 
-    @Column(name = "idartist")
-    private Long idartist;
+    @JsonManagedReference
+    @ManyToOne
+    @JoinColumn(name = "idartist")
+    private Artist idartist;
 
     @Column(name = "idmusic")
     private Long idmusic;

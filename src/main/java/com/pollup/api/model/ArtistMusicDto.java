@@ -20,4 +20,5 @@ public class ArtistMusicDto {
     private List<SocialNetwork> socialNetwork;
     private List<Reward> winrewards;
     private List<MusicArtistDto> likedmusic;
+    private List<FeaturingArtist> featuringArtists;
 }

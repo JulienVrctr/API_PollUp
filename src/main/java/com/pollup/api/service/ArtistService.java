@@ -83,6 +83,7 @@ public class ArtistService implements UserDetailsService {
         artistDTO.setNameMusic(artist.getMusics().stream().map(this::getMusicForArtist).collect(Collectors.toList()));
         artistDTO.setSocialNetwork(artist.getSocialNetwork());
         artistDTO.setLikedmusic(artist.getLikedmusic().stream().map(this::getMusicForArtist).collect(Collectors.toList()));
+        artistDTO.setFeaturingArtists(artist.getFeaturings());
         artistDTO.setWinrewards(artist.getWinrewards());
         return artistDTO;
     }
