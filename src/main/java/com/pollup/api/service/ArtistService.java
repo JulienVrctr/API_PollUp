@@ -83,7 +83,7 @@ public class ArtistService implements UserDetailsService {
         artistDTO.setNameMusic(artist.getMusics().stream().map(this::getMusicForArtist).collect(Collectors.toList()));
         artistDTO.setSocialNetwork(artist.getSocialNetwork());
         artistDTO.setLikedmusic(artist.getLikedmusic().stream().map(this::getMusicForArtist).collect(Collectors.toList()));
-        artistDTO.setFeaturingArtists(artist.getFeaturings());
+        artistDTO.setFeaturingArtists(artist.getFeaturings().stream().map(this::getFeaturingForArtist).collect(Collectors.toList()));
         artistDTO.setWinrewards(artist.getWinrewards());
         return artistDTO;
     }
@@ -95,6 +95,14 @@ public class ArtistService implements UserDetailsService {
         musicArtistDTO.setIdproject(music.getIdproject().getIdprojects());
         musicArtistDTO.setTitle(music.getTitle());
         return musicArtistDTO;
+    }
+
+    private FeaturingArtistDto getFeaturingForArtist(FeaturingArtist featuringArtist){
+        FeaturingArtistDto featuringArtistDto = new FeaturingArtistDto();
+        featuringArtistDto.setIdfeaturing(featuringArtist.getIdfeaturing());
+        featuringArtistDto.setIdmusic(featuringArtist.getIdmusic());
+        featuringArtistDto.setIdartist(featuringArtist.getIdartist().getIdartist());
+        return featuringArtistDto;
     }
 
     private ProjectDto getProjectForArtist(Project project){
