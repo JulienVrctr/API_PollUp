@@ -137,10 +137,10 @@ public class ArtistService implements UserDetailsService {
         return commentDTO;
     }
 
-    public Artist saveArtist(MultipartFile file, String name, String email, String phone, String avatar, String password, String registration_date) throws Exception {
+    public Artist saveArtist(MultipartFile dataAvatar, String name, String email, String phone, String avatar, String password, String registration_date, String banniere, MultipartFile dataBanniere) throws Exception {
         try {
             Artist artist
-                    = new Artist(name, email, phone, avatar, password, file.getBytes(), registration_date
+                    = new Artist(name, email, phone, avatar, password, dataAvatar.getBytes(), registration_date, banniere, dataBanniere.getBytes()
                     );
             return artistRepository.save(artist);
 

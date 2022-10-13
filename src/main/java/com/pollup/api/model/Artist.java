@@ -122,7 +122,7 @@ public class Artist implements UserDetails {
         return true;
     }
 
-    public Artist(String name, String email, String phone, String avatar, String password, byte[] data, String registration_date) {
+    public Artist(String name, String email, String phone, String avatar, String password, byte[] data, String registration_date, String banniere, byte[] dataBanniere) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -131,6 +131,7 @@ public class Artist implements UserDetails {
         this.password = password;
         this.data = data;
         this.registration_date = registration_date;
+        this.banniere = banniere;
+        this.dataBanniere = dataBanniere;
     }
-
 }

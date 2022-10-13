@@ -47,8 +47,8 @@ public class ArtistController {
     }
 
     @PostMapping("add_artist")
-    public Long postArtist(@RequestParam("file") MultipartFile file, @RequestParam String name, @RequestParam String email, @RequestParam String phone, @RequestParam String avatar, @RequestParam String password, @RequestParam String registration_date) throws Exception {
-        Artist artist = artistService.saveArtist(file, name, email, phone, avatar, password, registration_date);
+    public Long postArtist(@RequestParam("file") MultipartFile file, @RequestParam("dataBanniere") MultipartFile dataBanniere, @RequestParam String name, @RequestParam String email, @RequestParam String phone, @RequestParam String avatar, @RequestParam String password, @RequestParam String registration_date, @RequestParam String banniere) throws Exception {
+        Artist artist = artistService.saveArtist(file, name, email, phone, avatar, password, registration_date, banniere, dataBanniere);
         return artist.getIdartist();
     }
 
