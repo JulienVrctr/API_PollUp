@@ -134,4 +134,5 @@ public class Artist implements UserDetails {
         this.banniere = banniere;
         this.dataBanniere = dataBanniere;
     }
+
 }
