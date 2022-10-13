@@ -46,6 +46,12 @@ public class Artist implements UserDetails {
     @Lob
     private byte[] data;
 
+    @Column(name = "banniere")
+    private String banniere;
+
+    @Lob
+    private byte[] dataBanniere;
+
     @Column(name = "registration_date")
     private String registration_date;
 
