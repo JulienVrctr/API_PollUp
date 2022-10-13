@@ -76,6 +76,8 @@ public class ArtistService implements UserDetailsService {
         artistDTO.setPhone(artist.getPhone());
         artistDTO.setAvatar(artist.getAvatar());
         artistDTO.setData(artist.getData());
+        artistDTO.setBanniere(artist.getBanniere());
+        artistDTO.setDataBanniere(artist.getDataBanniere());
         artistDTO.setRegistration_date(artist.getRegistration_date());
         artistDTO.setPassword(artist.getPassword());
         artistDTO.setNb_polls(artist.getNb_polls());

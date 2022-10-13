@@ -12,6 +12,8 @@ public class ArtistMusicDto {
     private String phone;
     private String avatar;
     private byte[] data;
+    private String banniere;
+    private byte[] dataBanniere;
     private String password;
     private String registration_date;
     private Integer nb_polls;
